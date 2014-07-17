@@ -19,9 +19,9 @@ app.get("*.css", function(req, res) { //*.css
     fs.readFile(path, "utf8", function(err, data) {
         res.header("Content-type", "text/css");
         if (err) {
-        	console.error("Yo dawg, I heard you like files that don't exist. ", err);
+            console.error("Yo dawg, I heard you like files that don't exist. ", err);
             res.send("");
-        	return;
+            return;
         }
         try {
             res.send(myth(data));
@@ -37,4 +37,3 @@ app.use(express.static(path.join(__dirname, '')));
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
 });
-
