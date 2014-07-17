@@ -16,4 +16,6 @@
 2. install the Heroku toolbelt: https://devcenter.heroku.com/toolbelt-downloads/osx
 3. run `heroku login` in your terminal
 4. create a random Heroku server with `heroku create`; this will register a remote git endpoint for you (`git remote -v`), which should now show Github (origin) and Heroku
-5. then finally push your code repo up to Heroku (yes you can push to Github OR Heroku!) via a git push: `git push heroku master`
+5. run `heroku ps:scale web=1` to spin-up some resources for your app
+6. then finally push your code repo up to Heroku (yes you can push to Github OR Heroku!) via a git push: `git push heroku master`
+7. from here on out, anytime you want to push to the same heroku server, you only need to repeat step 6.
